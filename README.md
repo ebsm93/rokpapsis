@@ -1,2 +1,1 @@
-# rokpapsis
-a simple browser based rock-paper-scissor program
+a simple rock paper scissors game for the odin project foundations in javascript section.
