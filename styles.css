@@ -1,0 +1,19 @@
+body {
+	background-color: black;
+	/*color: limegreen;*/
+	color: whitesmoke;
+	display: flex;
+	flex-direction: column;	
+	text-align: center;
+}
+
+.moves button{
+	/*color: whitesmoke	;*/
+  font-size: xx-large;
+  padding: 10px;
+  margin: 15px;
+}
+
+.moves p{
+	font-size: x-large;
+}
