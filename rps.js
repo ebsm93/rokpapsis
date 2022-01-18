@@ -7,7 +7,7 @@ let playerScore = 0;
 let cpuScore = 0;
 
 //SET HTML selector variables
-let form = document.getElementById('form');
+const form = document.getElementById('form');
 const resultBoard = document.querySelector("#resultBoard");
 const resultingMoves = document.querySelector('#resultingMoves');
 const result = document.querySelector("#result");
@@ -22,6 +22,8 @@ const nextRoundButton = document.querySelector('#nextRound');
 const resetButton = document.querySelector("#reset");
 
 //SET BUTTON EVENT LISTENERS
+
+// on your marks ...
 setMatchButton.addEventListener('click', () => {
   playerName = document.querySelector('#textBox').value;
   victoryPoints = parseInt(document.querySelector('#textBox2').value);
@@ -31,20 +33,26 @@ setMatchButton.addEventListener('click', () => {
   match.innerHTML = `${playerName} vs CPU - First to ${victoryPoints} wins`;
   form.style.display = "none";
   startButton.style.display = '';
+  startButton.focus();
 });
 
+// get set ...
 startButton.addEventListener('click', gameInit)
 
+//go!
 scissorsButton.addEventListener('click', function(){play('scissors')});
 paperButton.addEventListener('click', function(){play('paper')});
 rockButton.addEventListener('click', function(){play('rock')});
 resetButton.addEventListener('click', resetGame);
+
+document.querySelector('#textBox').focus();
 
 //SET FUNCTIONS
 function gameInit() {
   startButton.style.display = 'none';  
   moveButtons.style.display = "";
   resetButton.style.display = "";
+  rockButton.focus();
 }
 
 function play(move) {
@@ -83,6 +91,7 @@ function UpdateScore() {
   moveButtons.style.display = "none";
   result.innerHTML = outcome;
   resultBoard.style.display = '';
+  nextRoundButton.focus();
   checkVictory();
   
 }
@@ -90,6 +99,7 @@ function UpdateScore() {
 function nextRound() {
   resultBoard.style.display = "none";
   moveButtons.style.display = "";
+  rockButton.focus();
 }
 
 function checkVictory() {
@@ -100,6 +110,7 @@ function checkVictory() {
 
 function gameOver() {
   if (playerScore > cpuScore){
+    final.style.color = 'blue';
     final.innerHTML = `${playerName} IS VICTORIOUS!`;
   } else {
     final.innerHTML = `THE CPU HAS DEFEATED YOU ...`;
@@ -107,11 +118,14 @@ function gameOver() {
   }
   final.style.display = '';
   nextRoundButton.style.display = 'none';
+  resetButton.style = "font-size: x-large";
+  resetButton.focus()
 }
 
 function resetGame() {
   nextRoundButton.style.display = '';
   moveButtons.style.display = "none";
+  resetButton.style = "font-size: xx-small";
   resetButton.style.display = "none";
   resultBoard.style.display = "none";
   final.style.display = 'none';
@@ -124,4 +138,5 @@ function resetGame() {
   cpuScore = 0;
   document.querySelector('#textBox').value = '';
   document.querySelector('#textBox2').value = '';
+  document.querySelector('#textBox').focus();
 }
