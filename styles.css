@@ -38,3 +38,7 @@ button:focus {
   font-size: 40px !important;
   border-radius: 5px;
 }
+
+.credits {
+  display: '';
+}

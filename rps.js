@@ -20,6 +20,7 @@ const paperButton = document.querySelector("#paper");
 const scissorsButton = document.querySelector("#scissors");
 const nextRoundButton = document.querySelector('#nextRound');
 const resetButton = document.querySelector("#reset");
+const credits = document.querySelector(".credits");
 
 //SET BUTTON EVENT LISTENERS
 
@@ -34,6 +35,7 @@ setMatchButton.addEventListener('click', () => {
   form.style.display = "none";
   startButton.style.display = 'inline-block';
   startButton.focus();
+  credits.style.display = 'none';
 });
 
 // get set ...
@@ -140,4 +142,5 @@ function resetGame() {
   document.querySelector('#textBox').value = '';
   document.querySelector('#textBox2').value = '';
   document.querySelector('#textBox').focus();
+  credits.style.display = '';
 }
