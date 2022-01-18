@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Rok-Papr-Sizrs!</title>
 	<link rel="stylesheet" href="styles.css">
+    <script src="rps.js" defer></script>
 </head>
 <body>
   <h1><u>ROCK PAPER SCISSORS</u></h1>
@@ -13,23 +14,23 @@
 	  <label for="textBox">Please type in your name</label><br>
 	  <input type="text" name="textBox" id="textBox" placeholder="Enter name"><br>
 	  <br><label for="textBox2">This match will be best of:</label><br>
-	  <input type="text" name="textBox2" id="textBox2" placeholder="Enter digits only">
-	  <button type="submit" id="setMatch">Set Match</button>
+	  <input type="text" name="textBox2" id="textBox2" placeholder="Enter digits only"><br>
+	  <br><button type="submit" id="setMatch">Set Match</button>
   </div>
 
   <h2 id="matchDisplay"></h2>
   <h3 id="score"></h3><br>
 
   
-  <div id="resultBoard" style="display:none;">
+  <div id="resultBoard">
     <h2 id="resultingMoves"></h2>
     <h2 id="result"></h2>
-    <button id="nextRound" style="font-size: x-large;">Next Round</button>
+    <button id="nextRound">Next Round</button>
   </div>
 
-  <h2 id="final" style="display: none;"></h2>
+  <h2 id="final"></h2>
 
-  <div class="moves" style="display: none;">
+  <div class="moves">
   	<p><strong>Choose your move:</strong></p>
     <button id='rock'>Rock</button>
     <button id='paper'>Paper</button>
@@ -37,13 +38,12 @@
   </div><br>
 
   <div class="reset-start">
-    <br><br><button id="reset" style="font-size: xx-small; display: none;">RESET GAME</button>
-    <br><br><button id="start" style="font-size: x-large; display: none;">START GAME</button>
+    <br><br><button id="reset">RESET GAME</button>
+    <br><br><button id="start">START GAME</button>
   </div>
   <p>
   <br>
   by ebs
   </p>
-  <script src="rps.js"></script>
 </body>
 </html>

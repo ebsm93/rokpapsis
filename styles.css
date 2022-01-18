@@ -8,12 +8,33 @@ body {
 }
 
 .moves button{
-	/*color: whitesmoke	;*/
   font-size: xx-large;
   padding: 10px;
   margin: 15px;
 }
 
-.moves p{
-	font-size: x-large;
+.moves p,
+#setMatch,
+#nextRound,
+#start {
+  font-size: x-large;
+}
+
+#resultBoard,
+#final,
+#reset,
+#start,
+.moves {
+  display: none;
+}
+
+#reset {
+  font-size: xx-small;
+}
+
+button:hover,
+button:focus {
+  background-color: lightgray;
+  font-size: 40px !important;
+  border-radius: 5px;
 }

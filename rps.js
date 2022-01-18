@@ -32,7 +32,7 @@ setMatchButton.addEventListener('click', () => {
   match = document.querySelector('#matchDisplay');
   match.innerHTML = `${playerName} vs CPU - First to ${victoryPoints} wins`;
   form.style.display = "none";
-  startButton.style.display = '';
+  startButton.style.display = 'inline-block';
   startButton.focus();
 });
 
@@ -50,8 +50,8 @@ document.querySelector('#textBox').focus();
 //SET FUNCTIONS
 function gameInit() {
   startButton.style.display = 'none';  
-  moveButtons.style.display = "";
-  resetButton.style.display = "";
+  moveButtons.style.display = "inline-block";
+  resetButton.style.display = "inline-block";
   rockButton.focus();
 }
 
@@ -90,7 +90,7 @@ function UpdateScore() {
   score.innerHTML = `<u>score</u> <br>${playerName}: ${playerScore}<br>CPU: ${cpuScore}`;
   moveButtons.style.display = "none";
   result.innerHTML = outcome;
-  resultBoard.style.display = '';
+  resultBoard.style.display = 'inline-block';
   nextRoundButton.focus();
   checkVictory();
   
@@ -98,7 +98,7 @@ function UpdateScore() {
 
 function nextRound() {
   resultBoard.style.display = "none";
-  moveButtons.style.display = "";
+  moveButtons.style.display = "inline-block";
   rockButton.focus();
 }
 
@@ -116,14 +116,15 @@ function gameOver() {
     final.innerHTML = `THE CPU HAS DEFEATED YOU ...`;
     final.style.color = 'red';
   }
-  final.style.display = '';
+  final.style.display = 'inline-block';
   nextRoundButton.style.display = 'none';
   resetButton.style = "font-size: x-large";
-  resetButton.focus()
+  resetButton.style.display = "inline-block";
+  resetButton.focus();
 }
 
 function resetGame() {
-  nextRoundButton.style.display = '';
+  nextRoundButton.style.display = 'inline-block';
   moveButtons.style.display = "none";
   resetButton.style = "font-size: xx-small";
   resetButton.style.display = "none";
@@ -133,7 +134,7 @@ function resetGame() {
   final.style.display = 'none';
   score.innerHTML = '';
   match.innerHTML = '';
-  form.style.display = '';
+  form.style.display = 'inline-block';
   playerScore = 0;
   cpuScore = 0;
   document.querySelector('#textBox').value = '';
